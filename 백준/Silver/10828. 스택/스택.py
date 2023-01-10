@@ -18,6 +18,4 @@ for _ in range(n):
         if len(stack)==0:
             print(-1)
             continue
-        res=stack.pop()
-        print(res)
-        stack.append(res)
+        print(stack[-1])
