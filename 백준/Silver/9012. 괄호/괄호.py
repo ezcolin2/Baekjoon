@@ -2,21 +2,20 @@ import sys
 n=int(sys.stdin.readline())
 for _ in range(n):
     ps=sys.stdin.readline().strip('\n')
-    left=0
-    right=0
+    stack=0
     con=False
     for i in ps:
         if i=='(':
-            left+=1
+            stack+=1
         else:
-            right+=1
-        if right>left:
+            stack-=1
+        if stack<0:
             print("NO")
             con=True
             break
     if con:
         continue
-    if left==right:
+    if stack==0:
         print("YES")
     else:
         print("NO")
