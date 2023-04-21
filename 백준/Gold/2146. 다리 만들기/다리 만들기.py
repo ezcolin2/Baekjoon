@@ -1,6 +1,6 @@
 import sys
 from collections import deque
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(100000)
 input=sys.stdin.readline
 n=int(input())
 arr=[list(map(int, input().split())) for _ in range(n)]
