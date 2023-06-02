@@ -1,3 +1,4 @@
+
 import sys
 import heapq
 input=sys.stdin.readline
@@ -32,7 +33,7 @@ while True:
         for i in range(4): #동서남북 조사
             nx=coordinate[0]+dx[i]
             ny=coordinate[1]+dy[i]
-            if can_go(nx, ny, n) and not visited[nx][ny] and cost+arr[nx][ny]<=arr2[nx][ny]: #좌표를 벗어나지 않는다면
+            if can_go(nx, ny, n) and not visited[nx][ny]: #좌표를 벗어나지 않는다면
                 heapq.heappush(queue, (cost+arr[nx][ny], (nx, ny)))
                 arr2[nx][ny]=cost+arr[nx][ny]
                 visited[nx][ny]=True
